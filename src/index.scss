@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Madimi+One&display=swap');
+//font-family: "Exo", sans-serif;
+//font-family: "Madimi One", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo", sans-serif;
+}
+
+body {
+    @apply h-dvh text-sm;
+    background: url('./assets/bg.gif');
+    color: rgb(81, 81, 81);
+}
+
+.font-Madimi-One {
+    font-family: "Madimi One", sans-serif;
+}
+
+.myIcons {
+    svg {
+        background-color: #eeeeee;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        padding: 2px;
+        cursor: pointer;
+
+        &:hover {
+        background-color: rgb(237, 215, 215);
+        }
+    }
+}
+
+.myHR {
+    border: none;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.myBody {
+    border-top: 1px solid #b5b5b5;
+    border-left: 1px solid #b5b5b5;
+    border-bottom: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+}
+
+.myShadow {
+    box-shadow: 2px 2px 0px 0 rgba(155, 80, 80, 0.243);
+}
+
+.myColorSelect {
+    @apply flex flex-col justify-center items-center gap-2 p-3 w-fit border border-transparent;
+
+    &.select {
+        border: 1px solid #f8baca;
+        @apply rounded-md;
+}
+
+    .colorCon {
+        @apply flex;
+        .myColorBoxes {
+            @apply w-8 h-8;
+        }
+    }
+}
+
+.myDownloadRow {
+    @apply flex flex-col pt-3;
+
+
+
+    &>div {
+        @apply flex justify-between items-center w-full;
+    }
+    &>p {
+        @apply text-xs pt-3;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px dashed #e7afbd;
+        @apply py-3;
+    }
+}
+
+.setup {
+    h2 {
+        @apply font-bold text-[#e588a4] mb-1;
+    }
+    p {
+        @apply py-1;
+    }
+}
+
+.body-scroll{
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+
+
+
+
+.movingText {
+    animation: move-words 35s linear infinite;
+    -webkit-animation: move-words 35s linear infinite;
+}
+
+@keyframes move-words {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
