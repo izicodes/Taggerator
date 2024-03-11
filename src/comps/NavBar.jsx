@@ -6,6 +6,7 @@ import { FiSun } from "react-icons/fi";
 import Btn from "./Btn";
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import music from "../../src/assets/bg-music.mp3";
 
 const NavBar = () => {
     const [musicState, setMusicState] = useState(false);
@@ -29,7 +30,7 @@ const NavBar = () => {
     };
     // Load the audio file
     useEffect(() => {
-        const audioElement = new Audio("../../src/assets/bg-music.mp3");
+        const audioElement = new Audio(music);
         audioElement.volume = 0.3; // Set initial volume to 50%
         audioElement.loop = true;
         setAudio(audioElement);
