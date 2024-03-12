@@ -103,7 +103,14 @@ body {
 .movingText {
     animation: move-words 35s linear infinite;
     -webkit-animation: move-words 35s linear infinite;
+
+    @media (max-width: 767px) {
+        animation: move-words2 35s linear infinite;
+        -webkit-animation: move-words2 35s linear infinite;
+    }
 }
+
+
 
 @keyframes move-words {
     0% {
@@ -111,5 +118,14 @@ body {
     }
     100% {
       left: -400%;
+    }
+  }
+
+@keyframes move-words2 {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -800%;
     }
   }
